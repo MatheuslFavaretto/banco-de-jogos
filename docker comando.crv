@@ -1,0 +1,5 @@
+# linhas de comandos executadas Mariadb
+python3 -m pip install --user --upgrade mysql-connector-python flask flask_sqlalchemy PyMySQL;
+docker pull mariadb:latest;
+docker volume create mysql;
+docker run --restart always --detach --env MARIADB_USER=matheus --env MARIADB_PASSWORD=matheus --env MARIADB_ROOT_PASSWORD=favaretto -p 3306:3306 -v mysql:/var/lib/mysql mariadb:latest
